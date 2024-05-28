@@ -133,7 +133,7 @@ See the examples folder for simple usecase examples.
 
 ### Build your own image
 
-	GOOS=linux go build && docker build -t emicklei/zazkia:latest .
+	GOOS=linux go build && docker buildx build --push --tag vdesabou/zazkia:latest -o type=image --platform=linux/arm64,linux/amd64 .
 
 
 © 2023, [ernestmicklei.com](http://ernestmicklei.com).  Apache v2 License. Contributions welcome.	
